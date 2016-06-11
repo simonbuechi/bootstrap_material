@@ -79,6 +79,7 @@ function bootstrap_material_menu_local_tasks(&$variables) {
   return $output;
 }
 
+
 /**
  * Overrides theme_menu_local_action().
  *
@@ -126,4 +127,13 @@ function bootstrap_material_menu_local_action($variables) {
   }
 
   return $output;
+}
+
+
+
+function bootstrap_material_preprocess_page(&$vars) {
+
+  $menu_tree = menu_tree_all_data('main-menu');
+  $tree_output_prepare = menu_tree_output($menu_tree);
+  $vars['primary_navigation'] = drupal_render($tree_output_prepare);
 }
