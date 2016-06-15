@@ -1,3 +1,4 @@
+/* Shadows (from mdl http://www.getmdl.io/) */
 /*
 
 To get this list of colors inject jQuery at http://www.google.com/design/spec/style/color.html#color-color-palette
@@ -3365,12 +3366,10 @@ hr.on-light {
 }
 /**
  * Text
- 
- 
+ */
 .region-content {
   font-size: 16px;
 }
-*/
 /**
  * Misc overrides.
  */
@@ -3711,10 +3710,6 @@ h2.pane-title {
   float: left;
   margin: 0;
 }
-p,
-li {
-  font-size: 16px;
-}
 .form-group {
   margin: 0;
   padding: 0;
@@ -3732,6 +3727,8 @@ h6,
 .h4 {
   font-weight: 400;
 }
-/* Shadows (from mdl http://www.getmdl.io/) */
+.shadow-z-2 {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 /* ANIMATION */
 /* SHADOWS */
