@@ -3,7 +3,8 @@
 @import "../bower_components/bootstrap-material-design/less/ripples.less";
 @import "overrides.bootstrap.less";
 
-@primary: @blue-grey-700;
+@primary: @blue-grey-600;
+@primary-50: @blue-grey-50;
 @primary-100: @blue-grey-100;
 @primary-200: @blue-grey-200;
 @primary-300: @blue-grey-300;
@@ -33,7 +34,7 @@
 // Converted bs variables
 
 // Bootstrap brand color customization
-@brand-primary: @blue-grey-700;
+@brand-primary: @primary;
 @brand-success: @green;
 @brand-danger: @red;
 @brand-warning: @deep-orange;
@@ -162,15 +163,15 @@
 @mdb-btn-font-size-xs: 10px;
 
 
-@mdb-btn-background-color: @primary-200; //transparent;
-@mdb-btn-background-color-text: @mdb-text-color-primary;
+@mdb-btn-background-color: @primary-500; 
+@mdb-btn-background-color-text: @primary-50;
 
 
 @mdl-btn-border-radus: 2px;
 //@mdb-btn-primary-color: ~"rgba(@{rgb-grey-500}, 0.20)";
 
 @mdb-btn-fab-size: 56px;
-@mdb-btn-fab-size-mini: 40px;
+@mdb-btn-fab-size-mini: 32px;
 @mdb-btn-fab-font-size: 24px;
 
 @mdb-btn-icon-size: 32px;
