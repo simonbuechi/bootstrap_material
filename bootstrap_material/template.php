@@ -88,6 +88,78 @@ function bootstrap_material_menu_local_tasks_alter(&$data, $router_item, $root_p
   }
 }
 
+function bootstrap_material_bootstrap_colorize_text_alter(&$texts) {
+  $texts['contains'][t('Apply')] = 'primary btn-raised';
+  $texts['contains'][t('Save')] = 'success btn-raised';
+  $texts['contains'][t('Log in')] = 'success btn-raised';  
+  $texts['contains'][t('Reset')] = 'danger btn-raised';
+  $texts['contains'][t('Cancel')] = 'danger btn-raised';
+  $texts['contains'][t('Execute')] = 'primary btn-raised';  
+}
+
+/**
+ * hook_preprocess_flag
+ */
+function bootstrap_material_preprocess_flag(&$variables) {
+  $variables['flag_classes_array'][] = 'btn btn-raised btn-primary';
+}
+
+
+function bootstrap_material_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'views-exposed-form-search-page-1') {
+    // HTML5 placeholder attribute
+    // $form['search_block_form']['#attributes']['placeholder'] = t('search...');
+    $form['views-exposed-form-search-page-1']['#attributes']['placeholder'] = t('search...');
+  }
+}
+/*
+ // search page using search_api, pages, views (instead of core search)
+function bootstrap_material_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    // HTML5 placeholder attribute
+    // $form['search_block_form']['#attributes']['placeholder'] = t('search...');
+    $form['#submit'][] = 'my_search_form_submit_function';
+  }
+}
+function my_search_form_submit_function(&$form, &$form_state) {
+  $search_str = 's/' . $form_state['values']['search_block_form'];
+  $form_state['rebuild'] = TRUE;
+  drupal_goto($path = $search_str);
+}
+*/
+
+ /**
+ * hook_preprocess_views_view
+ */
+function bootstrap_material_preprocess_views_view(&$vars) {
+  // Wrap exposed filters in a fieldset.
+  if ($vars['exposed']) {
+    drupal_add_js('misc/form.js');
+    drupal_add_js('misc/collapse.js');
+    // Default collapsed
+    $collapsed = FALSE;
+    $class = array('collapsible', 'collapsed');
+    if (count($_GET) > 1){
+      // assume other get vars are exposed filters, so expand fieldset to show applied filters
+      $collapsed = FALSE;
+      $class = array('collapsible');
+    }
+    $fieldset['element'] = array(
+      '#title' => t('Filter'),
+      '#collapsible' => TRUE,
+      '#collapsed' => $collapsed,
+      '#attributes' => array('class' => $class),
+      '#children' => $vars['exposed'],
+    );
+    $vars['exposed'] = theme('fieldset', $fieldset);
+  }
+}
+
+function bootstrap_material_views_bulk_operations_form_alter(&$form, &$form_state, $vbo) {
+  $form['operations_fieldset']['#collapsible'] = TRUE;
+  $form['operations_fieldset']['#collapsed'] = TRUE;
+}
+
 /**
  * Overrides theme_menu_local_action().
  *
@@ -139,55 +211,6 @@ function bootstrap_material_menu_local_action($variables) {
 }
 */
 
-function bootstrap_material_bootstrap_colorize_text_alter(&$texts) {
-  $texts['contains'][t('Apply')] = 'primary btn-raised';
-  $texts['contains'][t('Save')] = 'success btn-raised';
-  $texts['contains'][t('Reset')] = 'danger btn-raised';
-  $texts['contains'][t('Cancel')] = 'danger btn-raised';
-  $texts['contains'][t('Execute')] = 'primary btn-raised';  
-}
-
-
-/*
-function bootstrap_material_preprocess_page(&$vars) {
-
-  $menu_tree = menu_tree_all_data('main-menu');
-  $tree_output_prepare = menu_tree_output($menu_tree);
-  $vars['primary_navigation'] = drupal_render($tree_output_prepare);
-}
-*/
-
-
-
- /**
- * hook_preprocess_views_view
- */
- 
-function bootstrap_material_preprocess_views_view(&$vars) {
-  // Wrap exposed filters in a fieldset.
-  if ($vars['exposed']) {
-    drupal_add_js('misc/form.js');
-    drupal_add_js('misc/collapse.js');
-    // Default collapsed
-    $collapsed = FALSE;
-    $class = array('collapsible', 'collapsed');
-    if (count($_GET) > 1){
-      // assume other get vars are exposed filters, so expand fieldset to show applied filters
-      $collapsed = FALSE;
-      $class = array('collapsible');
-    }
-    $fieldset['element'] = array(
-      '#title' => t('Filter'),
-      '#collapsible' => TRUE,
-      '#collapsed' => $collapsed,
-      '#attributes' => array('class' => $class),
-      '#children' => $vars['exposed'],
-    );
-    $vars['exposed'] = theme('fieldset', $fieldset);
-  }
-}
-
-
 /*
 function bootstrap_material_preprocess_node(&$variables) {
   $variables['content']['links']['node']['#links']['node-readmore']['attributes']['class'][] = 'btn btn-raised btn-default';
@@ -197,47 +220,14 @@ function bootstrap_material_preprocess_node(&$variables) {
 function bootstrap_material_more_link($variables) {
   return '<div class="more-link btn btn-raised btn-default">' . l(t('More'), $variables['url'], array('attributes' => array('title' => $variables['title']))) . '</div>';
 }
-*/
 
 
 
-/*
 
-function bootstrap_material_views_bulk_operations_form_alter(&$form, &$form_state, $vbo) {
- if($form['#form_id'] =='views_form_publication_list'){
-  $form['operations_fieldset']['#collapsible'] = TRUE;
-  $form['operations_fieldset']['#collapsed'] = TRUE;
- }
+function bootstrap_material_preprocess_page(&$vars) {
+
+  $menu_tree = menu_tree_all_data('main-menu');
+  $tree_output_prepare = menu_tree_output($menu_tree);
+  $vars['primary_navigation'] = drupal_render($tree_output_prepare);
 }
 */
-
-/*
-function bootstrap_material_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'search_block_form') {
-    // HTML5 placeholder attribute
-    $form['search_block_form']['#attributes']['placeholder'] = t('search...');
-    $form['#submit'][] = 'my_search_form_submit_function';
-  }
-  if ($form_id == 'apachesolr-panels-search-block') {
-    // HTML5 placeholder attribute
-    $form['apachesolr-panels-search-block']['#attributes']['placeholder'] = t('search...');
-  }
-}
-*/
-
-/*
-   // search page using search_api, pages, views (instead of core search)
-  function my_search_form_submit_function(&$form, &$form_state) {
-    $search_str = 's/' . $form_state['values']['search_block_form'];
-    $form_state['rebuild'] = TRUE;
-    drupal_goto($path = $search_str);
-  }
-*/
-
-
-  function bootstrap_material_preprocess_flag(&$variables) {
-
-    $variables['flag_classes_array'][] = 'btn btn-raised btn-primary';
-}
-
-
