@@ -125,7 +125,7 @@
   padding: 0;
   li {
     float: left;
-    margin-right: 20px;
+    margin-right: 10px;
     a.active {
       display: none;
     }
@@ -292,8 +292,7 @@ body .container .well p, body .container-fluid .well p, body .container .jumbotr
 
 
 .views-exposed-form .views-exposed-widget {
-  width: 50%;
-  min-width: 300px;
+  max-width: 400px;
 }
 
 
@@ -307,14 +306,14 @@ body .container .well p, body .container-fluid .well p, body .container .jumbotr
 }
 
 .btn.btn-fab.rate1 {  background-color: #BF360C; }
-.btn.btn-fab.rate2 {  background-color: #D84315; } 
-.btn.btn-fab.rate3 {  background-color: #FF5722; }
+.btn.btn-fab.rate2 {  background-color: #FF5722; } 
+.btn.btn-fab.rate3 {  background-color: #FF8F00; }
 .btn.btn-fab.rate4 {  background-color: #9E9D24; }
-.btn.btn-fab.rate5 {  background-color: #009688; }
-.btn.btn-fab.rate6 {  background-color: #00695C; }
-.btn.btn-fab.rate7 {  background-color: #43A047; }
-.btn.btn-fab.rate8 {  background-color: #2E7D32; }
-.btn.btn-fab.rate9 {  background-color: #1B5E20; }
+.btn.btn-fab.rate5 {  background-color: #43A047; }
+.btn.btn-fab.rate6 {  background-color: #1B5E20; }
+.btn.btn-fab.rate7 {  background-color: #009688; }
+.btn.btn-fab.rate8 {  background-color: #00695C; }
+.btn.btn-fab.rate9 {  background-color: #0288D1; }
 
 .btn.btn-fab:hover {
   opacity: 0.8;
@@ -354,9 +353,9 @@ body .container .well p, body .container-fluid .well p, body .container .jumbotr
 }
 
 
-.knowledge:before, .Knowledge:before {  content: "bookmark";}
+.knowledge:before, .Knowledge:before {  content: "lightbulb_outline";}
 .person:before, .Person:before {  content: "person";}
-.publication:before, .Publication:before {  content: "library_books";}
+.publication:before, .Publication:before {  content: "book";}
 .event:before, .Event:before {  content: "event";}
 .collection:before, .Collection:before {  content: "view_headline";}
 
@@ -397,11 +396,6 @@ body .container .well p, body .container-fluid .well p, body .container .jumbotr
 }
 .views-field-field-tags a:hover {
   text-decoration: none;
-}
-.more-link a {
-  .btn;
-  background-color: @primary;
-  line-height: 2.5;
 }
 .panel > .panel-heading, .panel.panel-default > .panel-heading {
   background-color: @primary-100;
@@ -598,11 +592,11 @@ ul.pager li {
 }
 
 
-form.user-login-form ul {
+#user-login-form ul {
   margin: 0; 
   padding: 0;
 }
-form.user-login-form ul li{
+#user-login-form ul li{
   list-style-type: none;
   list-style-image: none;  
 }
@@ -655,3 +649,63 @@ form.user-login-form ul li{
 
 
 
+.well h2.pane-title {
+  margin-top: 5px;
+}
+#relation-add-explanation {
+  display: none;
+}
+
+// hide search submit button on frontpage
+#edit-submit-search {
+  display: none;
+}
+
+h2.block-title {
+  font-size: 1.3em;
+}
+
+.btn-fab-mini i.material-icons {
+  font-size: 18px;
+}
+
+.form-item-search-api-views-fulltext input {
+  color: @primary-50;
+}
+
+.form-item-search-api-views-fulltext .glyphicon, .form-item-search-api-views-fulltext .glyphicon.glyphicon-spin {
+  color: @primary-50;
+}
+
+#edit-search-api-views-fulltext-wrapper {
+  margin-left: 50px;
+}
+.views-exposed-widgets {
+  margin-bottom: 0;
+}
+
+.navbar .dropdown-menu .active > a, .navbar.navbar-default .dropdown-menu .active > a {
+  color: #000;
+  background-color: @primary-100;  
+}
+.navbar .dropdown-menu .active > a:hover, .navbar.navbar-default .dropdown-menu .active > a:hover, .navbar .dropdown-menu .active > a:focus, .navbar.navbar-default .dropdown-menu .active > a:focus {
+  color: #000;
+}
+
+
+// on node view page, show big icon
+.page-node h1 {
+  margin-left: 20px 0 20px 100px;
+}
+#node-view-icon {
+  position: absolute;
+  top: -90px;
+}
+#node-view-icon .btn.btn-fab {
+  height: 80px;
+  width: 80px;
+}
+#node-view-icon .btn.btn-fab i.material-icons {
+  font-size: 48px;
+  transform: translate(-24px,-12px);
+}
