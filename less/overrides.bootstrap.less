@@ -266,8 +266,7 @@
   }
 }
 
-
-h2.pane-title {
+h2.pane-title, h2.block-title {
   font-size: 1.6em;
 }
 
@@ -285,6 +284,9 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4,
 body .container .well p, body .container-fluid .well p, body .container .jumbotron p, body .container-fluid .jumbotron p {
   font-weight: 400;
 }
+ul {
+  list-style-type: disc;
+}
 
 .shadow-z-2 {
   .shadow-z-2;
@@ -298,11 +300,11 @@ body .container .well p, body .container-fluid .well p, body .container .jumbotr
 
 .row-action-primary {
   float: left;
-  margin-left: -70px;
+  margin-left: -60px;
 }
 .row-button {
   float: left;
-  margin-left: -70px;
+  margin-left: -55px;
 }
 
 .btn.btn-fab.rate1 {  background-color: #FF5722; }
@@ -322,23 +324,19 @@ body .container .well p, body .container-fluid .well p, body .container .jumbotr
 
 .term-reference-tree-button, .term-reference-tree-button.term-reference-tree-collapsed {
   background: none;
-  height: 25px;
-  width: 25px;
+//  height: 25px;
+//  width: 25px;
 }
-
-.term-reference-tree-button:before {
-  font-family: 'Material Icons';
-  content: "add";
-  font-size: 20px;
-}
-.term-reference-tree-button.term-reference-tree-collapsed:before {
-  font-family: 'Material Icons';
-  content: "remove";
-  font-size: 20px;
+.region-content ul.term-reference-tree-level, .term-reference-tree-level {
+  line-height: 2.2em;
 }
 
 
-.form-group .checkbox label, .form-group .radio label, .form-group label {
+.form-group .checkbox label, 
+.checkbox label,
+.form-group .radio label, 
+.radio label,
+.form-group label {
   color: @primary;
 }
 .no-term-reference-tree-button {
@@ -631,7 +629,10 @@ ul.pager li {
 .sliderfield-display-values-field {
   display: none;
 }
+.sliderfield .sliderfield-bubble {
+  border:0;
 
+}
 
 /* ------------- Tag Tree ------------- */
 .view-tag-tree .view-content div ul li {
@@ -657,9 +658,7 @@ ul.pager li {
   display: none;
 }
 
-h2.block-title {
-  font-size: 1.3em;
-}
+
 
 .btn-fab-mini i.material-icons {
   font-size: 18px;
@@ -674,7 +673,8 @@ h2.block-title {
 }
 
 #edit-search-api-views-fulltext-wrapper {
-  margin-left: 50px;
+  margin-left: 10px;
+  width: 250px;
 }
 .views-exposed-widgets {
   margin-bottom: 0;
@@ -690,12 +690,14 @@ h2.block-title {
 
 
 // on node view page, show big icon
-.page-node h1 {
-  margin: 20px 0 20px 100px;
+.page-node h1.page-header {
+  display: none;
 }
-#node-view-icon {
-  position: absolute;
-  top: -90px;
+h1.nodeviewtitle {
+  margin-left: 20px;
+}
+#node-view-icon, #node-view-title {
+  float: left;
 }
 #node-view-icon .btn.btn-fab {
   height: 80px;
@@ -704,4 +706,25 @@ h2.block-title {
 #node-view-icon .btn.btn-fab i.material-icons {
   font-size: 48px;
   transform: translate(-24px,-12px);
+}
+
+.search-api-sort-active img {
+    display: inline-block;
+    margin: 5px;
+    background-color: @primary-800;
+    padding: 4px;
+    border-radius: 12px;
+    color: white;
+    width: 24px;
+    height: 24px;
+}
+ul.search-api-sorts {
+  list-style: none;
+  padding: 0;
+}
+ul.search-api-sorts li {
+  line-height: 3em;
+}
+.block-facetapi button {
+  display: none;
 }
