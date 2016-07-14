@@ -3413,7 +3413,7 @@ ul {
 }
 .row-button {
   float: left;
-  margin-left: -55px;
+  margin-left: -60px;
 }
 .btn.btn-fab.rate1 {
   background-color: #FF5722;
@@ -3447,7 +3447,7 @@ ul {
 }
 .term-reference-tree-button,
 .term-reference-tree-button.term-reference-tree-collapsed {
-  background: none;
+  margin-right: 12px;
 }
 .region-content ul.term-reference-tree-level,
 .term-reference-tree-level {
@@ -3810,7 +3810,8 @@ ul.pager li {
   display: none;
 }
 h1.nodeviewtitle {
-  margin-left: 20px;
+  margin: 0 0 40px 0;
+  padding: 20px 0 0 95px;
 }
 #node-view-icon,
 #node-view-title {
@@ -3827,7 +3828,7 @@ h1.nodeviewtitle {
 .search-api-sort-active img {
   display: inline-block;
   margin: 5px;
-  background-color: #37474f;
+  background-color: #546e7a;
   padding: 4px;
   border-radius: 12px;
   color: white;
@@ -3843,6 +3844,16 @@ ul.search-api-sorts li {
 }
 .block-facetapi button {
   display: none;
+}
+.list-group-item h3 {
+  margin-top: 10px;
+}
+ul.facetapi-processed {
+  padding-left: 0;
+}
+.small,
+small {
+  font-size: 12px;
 }
 /* ANIMATION */
 /* SHADOWS */

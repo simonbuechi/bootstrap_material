@@ -104,7 +104,7 @@ function bootstrap_material_preprocess_flag(&$variables) {
   $variables['flag_classes_array'][] = 'btn btn-raised btn-primary';
 }
 
-
+/*
 function bootstrap_material_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'views-exposed-form-search-page-1') {
     // HTML5 placeholder attribute
@@ -112,6 +112,8 @@ function bootstrap_material_form_alter(&$form, &$form_state, $form_id) {
     $form['views-exposed-form-search-page-1']['#attributes']['placeholder'] = t('search...');
   }
 }
+*/
+
 /*
  // search page using search_api, pages, views (instead of core search)
 function bootstrap_material_form_alter(&$form, &$form_state, $form_id) {
