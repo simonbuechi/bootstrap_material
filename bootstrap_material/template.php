@@ -90,11 +90,16 @@ function bootstrap_material_menu_local_tasks_alter(&$data, $router_item, $root_p
 
 function bootstrap_material_bootstrap_colorize_text_alter(&$texts) {
   $texts['contains'][t('Apply')] = 'primary btn-raised';
+  $texts['contains'][t('Next')] = 'primary btn-raised';  
+  $texts['contains'][t('Execute')] = 'primary btn-raised';  
+  $texts['contains'][t('View changes')] = 'primary btn-raised';  
   $texts['contains'][t('Save')] = 'success btn-raised';
   $texts['contains'][t('Log in')] = 'success btn-raised';  
+  $texts['contains'][t('Confirm')] = 'success btn-raised';    
   $texts['contains'][t('Reset')] = 'danger btn-raised';
   $texts['contains'][t('Cancel')] = 'danger btn-raised';
-  $texts['contains'][t('Execute')] = 'primary btn-raised';  
+  $texts['contains'][t('Delete')] = 'danger btn-raised';  
+  $texts['contains'][t('Add another')] = 'primary';  
 }
 
 /**
@@ -103,16 +108,6 @@ function bootstrap_material_bootstrap_colorize_text_alter(&$texts) {
 function bootstrap_material_preprocess_flag(&$variables) {
   $variables['flag_classes_array'][] = 'btn btn-raised btn-primary';
 }
-
-/*
-function bootstrap_material_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'views-exposed-form-search-page-1') {
-    // HTML5 placeholder attribute
-    // $form['search_block_form']['#attributes']['placeholder'] = t('search...');
-    $form['views-exposed-form-search-page-1']['#attributes']['placeholder'] = t('search...');
-  }
-}
-*/
 
 /*
  // search page using search_api, pages, views (instead of core search)
@@ -139,7 +134,7 @@ function bootstrap_material_preprocess_views_view(&$vars) {
     drupal_add_js('misc/form.js');
     drupal_add_js('misc/collapse.js');
     // Default collapsed
-    $collapsed = FALSE;
+    $collapsed = TRUE;
     $class = array('collapsible', 'collapsed');
     if (count($_GET) > 1){
       // assume other get vars are exposed filters, so expand fieldset to show applied filters
@@ -157,10 +152,25 @@ function bootstrap_material_preprocess_views_view(&$vars) {
   }
 }
 
-function bootstrap_material_views_bulk_operations_form_alter(&$form, &$form_state, $vbo) {
-  $form['operations_fieldset']['#collapsible'] = TRUE;
-  $form['operations_fieldset']['#collapsed'] = TRUE;
+function bootstrap_material_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'views_exposed_form') {
+    // HTML5 placeholder attribute
+    // $form['search_block_form']['#attributes']['placeholder'] = t('search...');
+    $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('search...');
+  }
+  if ($form_id == 'finder_form_content_finder') {
+    $form['finder_form']['title']['#attributes']['placeholder'] = t('search...');
+  }  
 }
+
+
+function bootstrap_material_views_bulk_operations_form_alter(&$form, &$form_state, $vbo) {
+//  $form['operations_fieldset']['#collapsible'] = TRUE;
+//  $form['operations_fieldset']['#collapsed'] = TRUE;
+  $form['select']['#collapsible'] = TRUE;
+  $form['select']['#collapsed'] = TRUE;
+}
+
 
 /**
  * Overrides theme_menu_local_action().
