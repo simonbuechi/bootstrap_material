@@ -521,11 +521,11 @@ body .container-fluid .jumbotron-danger {
 .btn.btn-fab,
 .input-group-btn .btn.btn-fab {
   border-radius: 50%;
-  font-size: 24px;
-  height: 48px;
+  font-size: 22px;
+  height: 38px;
   margin: auto;
-  min-width: 48px;
-  width: 48px;
+  min-width: 38px;
+  width: 38px;
   padding: 0;
   overflow: hidden;
   box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
@@ -540,25 +540,25 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-fab.btn-fab-mini,
 .btn-group-sm .btn.btn-fab,
 .btn-group-sm .input-group-btn .btn.btn-fab {
-  height: 32px;
-  min-width: 32px;
-  width: 32px;
+  height: 28px;
+  min-width: 28px;
+  width: 28px;
 }
 .btn.btn-fab.btn-fab-mini.material-icons,
 .input-group-btn .btn.btn-fab.btn-fab-mini.material-icons,
 .btn-group-sm .btn.btn-fab.material-icons,
 .btn-group-sm .input-group-btn .btn.btn-fab.material-icons {
-  top: 0px;
-  left: 0px;
+  top: -1px;
+  left: -1px;
 }
 .btn.btn-fab i.material-icons,
 .input-group-btn .btn.btn-fab i.material-icons {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-12px, -12px);
-  line-height: 24px;
-  width: 24px;
+  transform: translate(-11px, -11px);
+  line-height: 22px;
+  width: 22px;
 }
 .btn i.material-icons,
 .input-group-btn .btn i.material-icons {
@@ -3124,6 +3124,14 @@ hr.on-light {
  * Styles to override bootstrap CSS.
  */
 /**
+ * optimize for big displays
+ */
+@media (min-width: 1580px) {
+  .container {
+    width: 1550px;
+  }
+}
+/**
  * Navigation
  */
 #navbar .breadcrumb {
@@ -3371,7 +3379,8 @@ hr.on-light {
 }
 h2.pane-title,
 h2.block-title {
-  font-size: 1.6em;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 .menu.nav {
   float: left;
@@ -3409,41 +3418,38 @@ ul {
 }
 .row-action-primary {
   float: left;
-  margin-left: -60px;
+  margin-left: -45px;
 }
 .row-button {
   float: left;
-  margin-left: -60px;
+  margin-left: -45px;
 }
 .btn.btn-fab.rate1 {
-  background-color: #FF5722;
+  background-color: #E91E63;
 }
 .btn.btn-fab.rate2 {
-  background-color: #FF9800;
+  background-color: #FF5722;
 }
 .btn.btn-fab.rate3 {
-  background-color: #FFC107;
+  background-color: #FF9800;
 }
 .btn.btn-fab.rate4 {
-  background-color: #C0CA33;
+  background-color: #9E9D24;
 }
 .btn.btn-fab.rate5 {
-  background-color: #8BC34A;
+  background-color: #689F38;
 }
 .btn.btn-fab.rate6 {
-  background-color: #4CAF50;
-}
-.btn.btn-fab.rate7 {
   background-color: #009688;
 }
+.btn.btn-fab.rate7 {
+  background-color: #0097A7;
+}
 .btn.btn-fab.rate8 {
-  background-color: #039BE5;
+  background-color: #0288D1;
 }
 .btn.btn-fab.rate9 {
   background-color: #3F51B5;
-}
-.btn-fab-mini {
-  margin-right: 15px !important;
 }
 .term-reference-tree-button,
 .term-reference-tree-button.term-reference-tree-collapsed {
@@ -3491,7 +3497,10 @@ ul {
 }
 .list-group .list-group-item {
   min-height: 70px;
-  padding: 10px 0 15px 70px;
+  padding: 10px 0 15px 50px;
+}
+.list-group {
+  margin-bottom: 0;
 }
 .taglist ul {
   margin: 0;
@@ -3587,7 +3596,7 @@ ul.term ul li:before {
   left: 0;
 }
 ul.term ul li:last-child:before {
-  background: #EEEEEE;
+  background: #fff;
   /* same with body background */
   height: auto;
   top: 10px;
@@ -3772,14 +3781,17 @@ ul.pager li {
 .well h2.pane-title {
   margin-top: 5px;
 }
+.well .panel-pane {
+  margin-bottom: 40px;
+}
 #relation-add-explanation {
   display: none;
 }
 #edit-submit-search {
   display: none;
 }
-.btn-fab-mini i.material-icons {
-  font-size: 18px;
+.btn-fab i.material-icons {
+  font-size: 20px;
 }
 .form-item-search-api-views-fulltext input {
   color: #eceff1;
@@ -3828,12 +3840,13 @@ h1.nodeviewtitle {
 .search-api-sort-active img {
   display: inline-block;
   margin: 5px;
-  background-color: #546e7a;
+  background-color: #eceff1;
   padding: 4px;
   border-radius: 12px;
   color: white;
   width: 24px;
   height: 24px;
+  border: 1px solid #90a4ae;
 }
 ul.search-api-sorts {
   list-style: none;
@@ -3854,6 +3867,23 @@ ul.facetapi-processed {
 .small,
 small {
   font-size: 12px;
+}
+#autocomplete li {
+  white-space: normal;
+  padding: 5px;
+}
+html.js input.form-autocomplete {
+  background-image: linear-gradient(#546e7a, #546e7a), linear-gradient(#D2D2D2, #D2D2D2);
+  background-position: center bottom, center calc(99%);
+}
+.btn,
+.input-group-btn .btn {
+  padding: 8px 15px;
+}
+.flag-wrapper {
+  display: inline-block;
+  float: left;
+  margin-right: 8px;
 }
 /* ANIMATION */
 /* SHADOWS */

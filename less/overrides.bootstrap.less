@@ -3,9 +3,16 @@
  */
 
 /**
+ * optimize for big displays
+ */
+@media (min-width: 1580px) {
+  .container {
+    width: 1550px;
+  }
+}
+/**
  * Navigation
  */
-
 #navbar .breadcrumb {
   padding: 0;
   margin-bottom: 0;
@@ -267,7 +274,8 @@
 }
 
 h2.pane-title, h2.block-title {
-  font-size: 1.6em;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 .menu.nav {
@@ -297,30 +305,24 @@ ul {
   max-width: 400px;
 }
 
-
 .row-action-primary {
   float: left;
-  margin-left: -60px;
+  margin-left: -45px;
 }
 .row-button {
   float: left;
-  margin-left: -60px;
+  margin-left: -45px;
 }
 
-.btn.btn-fab.rate1 {  background-color: #FF5722; }
-.btn.btn-fab.rate2 {  background-color: #FF9800; } 
-.btn.btn-fab.rate3 {  background-color: #FFC107; }
-.btn.btn-fab.rate4 {  background-color: #C0CA33; }
-.btn.btn-fab.rate5 {  background-color: #8BC34A; }
-.btn.btn-fab.rate6 {  background-color: #4CAF50; }
-.btn.btn-fab.rate7 {  background-color: #009688; }
-.btn.btn-fab.rate8 {  background-color: #039BE5; }
+.btn.btn-fab.rate1 {  background-color: #E91E63; }
+.btn.btn-fab.rate2 {  background-color: #FF5722; } 
+.btn.btn-fab.rate3 {  background-color: #FF9800; }
+.btn.btn-fab.rate4 {  background-color: #9E9D24; }
+.btn.btn-fab.rate5 {  background-color: #689F38; }
+.btn.btn-fab.rate6 {  background-color: #009688; }
+.btn.btn-fab.rate7 {  background-color: #0097A7; }
+.btn.btn-fab.rate8 {  background-color: #0288D1; }
 .btn.btn-fab.rate9 {  background-color: #3F51B5; }
-
-.btn-fab-mini {
-  margin-right: 15px !important;
-}
-
 
 .term-reference-tree-button, .term-reference-tree-button.term-reference-tree-collapsed {
 //  background: none;
@@ -359,7 +361,10 @@ margin-right: 12px;
 }
 .list-group .list-group-item{
   min-height: 70px; 
-  padding: 10px 0 15px 70px;
+  padding: 10px 0 15px 50px;
+}
+.list-group {
+  margin-bottom: 0;
 }
 .taglist ul {
   margin: 0;
@@ -451,7 +456,7 @@ ul.term ul li:before {
   left:0;
 }
 ul.term ul li:last-child:before {
-  background: @body-bg; /* same with body background */
+  background: #fff; /* same with body background */
   height:auto;
   top:10px; /* (line-height/2) */
   bottom:0;
@@ -650,6 +655,9 @@ ul.pager li {
 .well h2.pane-title {
   margin-top: 5px;
 }
+.well .panel-pane {
+    margin-bottom: 40px;
+}
 #relation-add-explanation {
   display: none;
 }
@@ -661,8 +669,8 @@ ul.pager li {
 
 
 
-.btn-fab-mini i.material-icons {
-  font-size: 18px;
+.btn-fab i.material-icons {
+  font-size: 20px;
 }
 
 .form-item-search-api-views-fulltext input {
@@ -713,12 +721,13 @@ h1.nodeviewtitle {
 .search-api-sort-active img {
     display: inline-block;
     margin: 5px;
-    background-color: @primary-600;
+    background-color: @primary-50;
     padding: 4px;
     border-radius: 12px;
     color: white;
     width: 24px;
     height: 24px;
+    border: 1px solid @primary-300;
 }
 ul.search-api-sorts {
   list-style: none;
@@ -739,4 +748,21 @@ ul.facetapi-processed {
 }
 .small, small {
   font-size: 12px;
+}
+#autocomplete li {
+  white-space: normal;
+  padding: 5px;
+}
+html.js input.form-autocomplete {
+  background-image: linear-gradient(#546e7a,#546e7a),linear-gradient(#D2D2D2,#D2D2D2);
+  background-position: center bottom,center calc(100% - 1px);
+}
+
+.btn, .input-group-btn .btn {
+  padding: 8px 15px;
+}
+.flag-wrapper {
+  display: inline-block;
+  float: left;
+  margin-right: 8px;
 }
