@@ -324,16 +324,14 @@ ul {
 .btn.btn-fab.rate8 {  background-color: #0288D1; }
 .btn.btn-fab.rate9 {  background-color: #3F51B5; }
 
-.term-reference-tree-button, .term-reference-tree-button.term-reference-tree-collapsed {
-//  background: none;
-//  height: 25px;
-//  width: 25px;
-margin-right: 12px;
-}
 .region-content ul.term-reference-tree-level, .term-reference-tree-level {
   line-height: 2.2em;
 }
-
+.item-list .field-widget-term-reference-tree ul .form-item, 
+.block .field-widget-term-reference-tree ul .form-item, 
+.field-widget-term-reference-tree ul .form-item {
+  margin: 0 0 0 8px;
+}
 
 .form-group .checkbox label, 
 .checkbox label,
@@ -765,4 +763,15 @@ html.js input.form-autocomplete {
   display: inline-block;
   float: left;
   margin-right: 8px;
+}
+
+body .container .well, body .container-fluid .well {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 2px 10px 0 rgba(0,0,0,0.19)
+}
+
+.finder-form button {
+  display: none;
+}
+#autocomplete ul li:hover {
+  background-color: @primary-100;
 }
