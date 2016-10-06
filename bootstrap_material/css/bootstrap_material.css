@@ -3424,6 +3424,11 @@ ul {
   float: left;
   margin-left: -45px;
 }
+.row-button-right {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
 .btn.btn-fab.rate1 {
   background-color: #E91E63;
 }
