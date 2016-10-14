@@ -568,21 +568,21 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-lg,
 .btn-group-lg .btn,
 .btn-group-lg .input-group-btn .btn {
-  font-size: 16px;
+  font-size: 14px;
 }
 .btn.btn-sm,
 .input-group-btn .btn.btn-sm,
 .btn-group-sm .btn,
 .btn-group-sm .input-group-btn .btn {
   padding: 5px 20px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .btn.btn-xs,
 .input-group-btn .btn.btn-xs,
 .btn-group-xs .btn,
 .btn-group-xs .input-group-btn .btn {
   padding: 4px 15px;
-  font-size: 10px;
+  font-size: 12px;
 }
 fieldset[disabled][disabled] .btn,
 fieldset[disabled][disabled] .input-group-btn .btn,
@@ -1239,18 +1239,18 @@ label.radio-inline input[type=radio][disabled] ~ .circle {
   }
 }
 legend {
-  margin-bottom: 22px;
-  font-size: 24px;
+  margin-bottom: 20px;
+  font-size: 21px;
 }
 output {
   padding-top: 8px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
 }
 .form-control {
-  height: 38px;
+  height: 36px;
   padding: 7px 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -1258,7 +1258,7 @@ output {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 38px;
+    line-height: 36px;
   }
   input[type="date"].input-sm,
   input[type="time"].input-sm,
@@ -1268,7 +1268,7 @@ output {
   .input-group-sm input[type="time"],
   .input-group-sm input[type="datetime-local"],
   .input-group-sm input[type="month"] {
-    line-height: 29px;
+    line-height: 24px;
   }
   input[type="date"].input-lg,
   input[type="time"].input-lg,
@@ -1283,47 +1283,47 @@ output {
 }
 .radio label,
 .checkbox label {
-  min-height: 22px;
+  min-height: 20px;
 }
 .form-control-static {
   padding-top: 8px;
   padding-bottom: 8px;
-  min-height: 38px;
+  min-height: 34px;
 }
 .input-sm .input-sm {
-  height: 29px;
+  height: 24px;
   padding: 3px 0;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.5;
   border-radius: 0;
 }
 .input-sm select.input-sm {
-  height: 29px;
-  line-height: 29px;
+  height: 24px;
+  line-height: 24px;
 }
 .input-sm textarea.input-sm,
 .input-sm select[multiple].input-sm {
   height: auto;
 }
 .form-group-sm .form-control {
-  height: 29px;
+  height: 24px;
   padding: 3px 0;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.5;
 }
 .form-group-sm select.form-control {
-  height: 29px;
-  line-height: 29px;
+  height: 24px;
+  line-height: 24px;
 }
 .form-group-sm textarea.form-control,
 .form-group-sm select[multiple].form-control {
   height: auto;
 }
 .form-group-sm .form-control-static {
-  height: 29px;
-  min-height: 36px;
+  height: 24px;
+  min-height: 31px;
   padding: 4px 0;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.5;
 }
 .input-lg .input-lg {
@@ -1357,7 +1357,7 @@ output {
 }
 .form-group-lg .form-control-static {
   height: 44px;
-  min-height: 40px;
+  min-height: 38px;
   padding: 10px 0;
   font-size: 18px;
   line-height: 1.3333333;
@@ -1370,7 +1370,7 @@ output {
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 30px;
+  min-height: 28px;
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
@@ -1386,7 +1386,7 @@ output {
 @media (min-width: 768px) {
   .form-horizontal .form-group-sm .control-label {
     padding-top: 4px;
-    font-size: 14px;
+    font-size: 11px;
   }
 }
 .label {
@@ -1555,19 +1555,19 @@ fieldset[disabled] .form-group .form-control {
   margin-bottom: 7px;
 }
 .form-control::-moz-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
   color: #BDBDBD;
   font-weight: 400;
 }
 .form-control:-ms-input-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
   color: #BDBDBD;
   font-weight: 400;
 }
 .form-control::-webkit-input-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
   color: #BDBDBD;
   font-weight: 400;
@@ -1575,42 +1575,42 @@ fieldset[disabled] .form-group .form-control {
 .checkbox label,
 .radio label,
 label {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
   color: #BDBDBD;
   font-weight: 400;
 }
 label.control-label {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.07142857;
   font-weight: 400;
   margin: 16px 0 0 0;
 }
 .help-block {
   margin-top: 0;
-  font-size: 12px;
+  font-size: 11px;
 }
 .form-group {
   padding-bottom: 7px;
-  margin: 28px 0 0 0;
+  margin: 27px 0 0 0;
 }
 .form-group .form-control {
   margin-bottom: 7px;
 }
 .form-group .form-control::-moz-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
   color: #BDBDBD;
   font-weight: 400;
 }
 .form-group .form-control:-ms-input-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
   color: #BDBDBD;
   font-weight: 400;
 }
 .form-group .form-control::-webkit-input-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
   color: #BDBDBD;
   font-weight: 400;
@@ -1618,62 +1618,62 @@ label.control-label {
 .form-group .checkbox label,
 .form-group .radio label,
 .form-group label {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
   color: #BDBDBD;
   font-weight: 400;
 }
 .form-group label.control-label {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.07142857;
   font-weight: 400;
   margin: 16px 0 0 0;
 }
 .form-group .help-block {
   margin-top: 0;
-  font-size: 12px;
+  font-size: 11px;
 }
 .form-group.label-floating label.control-label,
 .form-group.label-placeholder label.control-label {
   top: -7px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857143;
 }
 .form-group.label-static label.control-label,
 .form-group.label-floating.is-focused label.control-label,
 .form-group.label-floating:not(.is-empty) label.control-label {
-  top: -30px;
+  top: -28px;
   left: 0;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.07142857;
 }
 .form-group.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
-  top: -30px;
+  top: -28px;
   left: 0;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.07142857;
 }
 .form-group.form-group-sm {
   padding-bottom: 3px;
-  margin: 23px 0 0 0;
+  margin: 21px 0 0 0;
 }
 .form-group.form-group-sm .form-control {
   margin-bottom: 3px;
 }
 .form-group.form-group-sm .form-control::-moz-placeholder {
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.5;
   color: #BDBDBD;
   font-weight: 400;
 }
 .form-group.form-group-sm .form-control:-ms-input-placeholder {
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.5;
   color: #BDBDBD;
   font-weight: 400;
 }
 .form-group.form-group-sm .form-control::-webkit-input-placeholder {
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.5;
   color: #BDBDBD;
   font-weight: 400;
@@ -1681,39 +1681,39 @@ label.control-label {
 .form-group.form-group-sm .checkbox label,
 .form-group.form-group-sm .radio label,
 .form-group.form-group-sm label {
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.5;
   color: #BDBDBD;
   font-weight: 400;
 }
 .form-group.form-group-sm label.control-label {
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.125;
   font-weight: 400;
   margin: 16px 0 0 0;
 }
 .form-group.form-group-sm .help-block {
   margin-top: 0;
-  font-size: 11px;
+  font-size: 9px;
 }
 .form-group.form-group-sm.label-floating label.control-label,
 .form-group.form-group-sm.label-placeholder label.control-label {
   top: -11px;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.5;
 }
 .form-group.form-group-sm.label-static label.control-label,
 .form-group.form-group-sm.label-floating.is-focused label.control-label,
 .form-group.form-group-sm.label-floating:not(.is-empty) label.control-label {
-  top: -28px;
+  top: -25px;
   left: 0;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.125;
 }
 .form-group.form-group-sm.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
-  top: -28px;
+  top: -25px;
   left: 0;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.125;
 }
 .form-group.form-group-lg {
@@ -3220,7 +3220,7 @@ hr.on-light {
  */
 .admin .breadcrumb {
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 56px;
   margin-bottom: 0;
 }
@@ -3358,7 +3358,7 @@ hr.on-light {
  * Text
  */
 .region-content {
-  font-size: 16px;
+  font-size: 14px;
 }
 /**
  * Misc overrides.
@@ -3426,8 +3426,8 @@ ul {
 }
 .row-button-right {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 8px;
+  right: 0;
 }
 .btn.btn-fab.rate1 {
   background-color: #E91E63;
@@ -3641,7 +3641,8 @@ ul.term li a:hover {
   line-height: 3;
 }*/
 .unflag-action {
-  background-color: #4caf50 !important;
+  background-color: #546e7a !important;
+  color: #eceff1 !important;
 }
 /*
 .active {
@@ -3679,12 +3680,7 @@ mark,
   text-transform: capitalize;
   @include border-radius(10px);
 }
-.field--name-body p, .field--name-body li{
-  font-size: 1.15rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.5em; 
-  color: @default800;
-}
+
 html.js .form-autocomplete {
   background-image: none;
 }
@@ -3828,7 +3824,7 @@ ul.pager li {
   display: none;
 }
 h1.nodeviewtitle {
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
   padding: 20px 0 0 95px;
 }
 #node-view-icon,
@@ -3836,12 +3832,12 @@ h1.nodeviewtitle {
   float: left;
 }
 #node-view-icon .btn.btn-fab {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
 }
 #node-view-icon .btn.btn-fab i.material-icons {
-  font-size: 48px;
-  transform: translate(-24px, -12px);
+  font-size: 45px;
+  transform: translate(-22px, -11px);
 }
 .search-api-sort-active img {
   display: inline-block;
@@ -3872,7 +3868,7 @@ ul.facetapi-processed {
 }
 .small,
 small {
-  font-size: 12px;
+  font-size: 11px;
 }
 #autocomplete li {
   white-space: normal;
@@ -3900,6 +3896,13 @@ body .container-fluid .well {
 }
 #autocomplete ul li:hover {
   background-color: #cfd8dc;
+}
+.field-name-body p,
+.field-name-body li {
+  font-size: 16px;
+}
+.tab-margin {
+  margin-bottom: 20px;
 }
 /* ANIMATION */
 /* SHADOWS */

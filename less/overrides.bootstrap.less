@@ -108,7 +108,7 @@
  */
 .admin .breadcrumb {
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 56px;
   margin-bottom: 0;
   a, .active {
@@ -250,7 +250,7 @@
  */
  
 .region-content {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /**
@@ -311,8 +311,8 @@ ul {
 }
 .row-button-right {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 8px;
+  right: 0;
 }
 .btn.btn-fab.rate1 {  background-color: #E91E63; }
 .btn.btn-fab.rate2 {  background-color: #FF5722; } 
@@ -492,7 +492,8 @@ ul.term li a:hover {
   line-height: 3;
 }*/
 .unflag-action {
-  background-color: @brand-success !important;
+  background-color: @primary !important;
+  color: @primary-50 !important;
 } 
 /*
 .active {
@@ -530,12 +531,7 @@ mark,
   text-transform: capitalize;
   @include border-radius(10px);
 }
-.field--name-body p, .field--name-body li{
-  font-size: 1.15rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.5em; 
-  color: @default800;
-}
+
 html.js .form-autocomplete {
   background-image: none;
 }
@@ -701,19 +697,19 @@ ul.pager li {
   display: none;
 }
 h1.nodeviewtitle {
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
   padding: 20px 0 0 95px;
 }
 #node-view-icon, #node-view-title {
   float: left;
 }
 #node-view-icon .btn.btn-fab {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
 }
 #node-view-icon .btn.btn-fab i.material-icons {
-  font-size: 48px;
-  transform: translate(-24px,-12px);
+  font-size: 45px;
+  transform: translate(-22px,-11px);
 }
 
 .search-api-sort-active img {
@@ -745,7 +741,7 @@ ul.facetapi-processed {
   padding-left: 0;
 }
 .small, small {
-  font-size: 12px;
+  font-size: 11px;
 }
 #autocomplete li {
   white-space: normal;
@@ -774,4 +770,12 @@ body .container .well, body .container-fluid .well {
 }
 #autocomplete ul li:hover {
   background-color: @primary-100;
+}
+
+
+.field-name-body p, .field-name-body li{
+  font-size: 16px;
+}
+.tab-margin {
+	margin-bottom: 20px;
 }

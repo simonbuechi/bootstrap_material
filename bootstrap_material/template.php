@@ -82,7 +82,7 @@ function bootstrap_material_menu_local_tasks(&$variables) {
 function bootstrap_material_menu_local_tasks_alter(&$data, $router_item, $root_path) {
   foreach ($data['tabs'] as $key1 => $tabs) {
     foreach ($tabs['output'] as $key2 => $item) {
-        $data['tabs'][$key1]['output'][$key2]['#link']['localized_options']['attributes']['class'][] = 'btn btn-raised btn-primary';
+        $data['tabs'][$key1]['output'][$key2]['#link']['localized_options']['attributes']['class'][] = 'btn btn-sm btn-primary';
       
     }
   }
@@ -90,23 +90,23 @@ function bootstrap_material_menu_local_tasks_alter(&$data, $router_item, $root_p
 
 function bootstrap_material_bootstrap_colorize_text_alter(&$texts) {
   $texts['contains'][t('Apply')] = 'primary btn-raised';
-  $texts['contains'][t('Next')] = 'primary btn-raised';  
+  $texts['contains'][t('Next')] = 'primary';  
   $texts['contains'][t('Execute')] = 'primary btn-raised';  
-  $texts['contains'][t('View changes')] = 'primary btn-raised';  
-  $texts['contains'][t('Save')] = 'success btn-raised';
-  $texts['contains'][t('Log in')] = 'success btn-raised';  
-  $texts['contains'][t('Confirm')] = 'success btn-raised';    
-  $texts['contains'][t('Reset')] = 'danger btn-raised';
-  $texts['contains'][t('Cancel')] = 'danger btn-raised';
-  $texts['contains'][t('Delete')] = 'danger btn-raised';  
-  $texts['contains'][t('Add another')] = 'primary';  
+  $texts['contains'][t('View changes')] = 'primary';  
+  $texts['contains'][t('Save')] = 'primary btn-raised';
+  $texts['contains'][t('Log in')] = 'primary btn-raised';  
+  $texts['contains'][t('Confirm')] = 'primary btn-raised';    
+  $texts['contains'][t('Reset')] = 'danger';
+  $texts['contains'][t('Cancel')] = 'danger';
+  $texts['contains'][t('Delete')] = 'danger';  
+  $texts['contains'][t('Add')] = 'primary';  
 }
 
 /**
  * hook_preprocess_flag
  */
 function bootstrap_material_preprocess_flag(&$variables) {
-  $variables['flag_classes_array'][] = 'btn btn-raised btn-primary';
+  $variables['flag_classes_array'][] = 'btn btn-primary';
 }
 
 /*
