@@ -364,7 +364,7 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-default,
 .btn-group-raised .btn:not(.btn-link):active.btn-default,
 .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-default {
-  background-color: #688897;
+  background-color: #58727f;
 }
 .btn.btn-raised:not(.btn-link):hover.btn-inverse,
 .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-inverse,
@@ -400,7 +400,7 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-primary,
 .btn-group-raised .btn:not(.btn-link):active.btn-primary,
 .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-primary {
-  background-color: #5c7986;
+  background-color: #4c636e;
 }
 .btn.btn-raised:not(.btn-link):hover.btn-success,
 .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-success,
@@ -418,7 +418,7 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-success,
 .btn-group-raised .btn:not(.btn-link):active.btn-success,
 .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-success {
-  background-color: #59b75c;
+  background-color: #46a149;
 }
 .btn.btn-raised:not(.btn-link):hover.btn-info,
 .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-info,
@@ -436,7 +436,7 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-info,
 .btn-group-raised .btn:not(.btn-link):active.btn-info,
 .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-info {
-  background-color: #0fb2fc;
+  background-color: #039be0;
 }
 .btn.btn-raised:not(.btn-link):hover.btn-warning,
 .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-warning,
@@ -2645,7 +2645,7 @@ fieldset[disabled] .navbar .btn-link:focus {
 }
 .panel > .panel-heading,
 .panel.panel-default > .panel-heading {
-  background-color: #b0bec5;
+  background-color: #eeeeee;
 }
 .panel.panel-inverse > .panel-heading {
   background-color: #3f51b5;
@@ -3903,6 +3903,23 @@ body .container-fluid .well {
 }
 .tab-margin {
   margin-bottom: 20px;
+}
+.flag-waiting .flag-throbber {
+  position: absolute;
+  top: 15px;
+  left: 2px;
+}
+.panel > .panel-heading,
+.panel.panel-default > .panel-heading {
+  background-color: #607d8b;
+  color: #eceff1;
+}
+details.more summary {
+  padding: 6px 12px;
+  color: #eceff1;
+  background-color: #607d8b;
+  display: inline-block;
+  cursor: pointer;
 }
 /* ANIMATION */
 /* SHADOWS */
