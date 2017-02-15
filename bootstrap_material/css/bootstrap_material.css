@@ -569,16 +569,16 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-fab.btn-fab-mini,
 .btn-group-sm .btn.btn-fab,
 .btn-group-sm .input-group-btn .btn.btn-fab {
-  height: 28px;
-  min-width: 28px;
-  width: 28px;
+  height: 22px;
+  min-width: 22px;
+  width: 22px;
 }
 .btn.btn-fab.btn-fab-mini.material-icons,
 .input-group-btn .btn.btn-fab.btn-fab-mini.material-icons,
 .btn-group-sm .btn.btn-fab.material-icons,
 .btn-group-sm .input-group-btn .btn.btn-fab.material-icons {
-  top: -1px;
-  left: -1px;
+  top: -3px;
+  left: -3px;
 }
 .btn.btn-fab i.material-icons,
 .input-group-btn .btn.btn-fab i.material-icons {
@@ -3459,31 +3459,31 @@ ul {
   right: 0;
 }
 .btn.btn-fab.rate1 {
-  background-color: #F06292;
+  background-color: #F44336;
 }
 .btn.btn-fab.rate2 {
-  background-color: #E91E63;
+  background-color: #F57C00;
 }
 .btn.btn-fab.rate3 {
-  background-color: #880E4F;
+  background-color: #FFB300;
 }
 .btn.btn-fab.rate4 {
-  background-color: #C0CA33;
-}
-.btn.btn-fab.rate5 {
   background-color: #9E9D24;
 }
+.btn.btn-fab.rate5 {
+  background-color: #388E3C;
+}
 .btn.btn-fab.rate6 {
-  background-color: #827717;
+  background-color: #009688;
 }
 .btn.btn-fab.rate7 {
-  background-color: #26A69A;
+  background-color: #2196F3;
 }
 .btn.btn-fab.rate8 {
-  background-color: #00796B;
+  background-color: #3F51B5;
 }
 .btn.btn-fab.rate9 {
-  background-color: #004D40;
+  background-color: #673AB7;
 }
 .region-content ul.term-reference-tree-level,
 .term-reference-tree-level {
@@ -3611,8 +3611,8 @@ ul.term ul:before {
   border-left: 1px solid;
 }
 ul.term li {
-  margin: 4px 0 0 0;
-  padding: 4px 12px 0 12px;
+  margin: 0 0 0 0;
+  padding: 4px 12px 0 10px;
   /* indentation + 2 */
   font-size: 1em;
   line-height: 20px;
@@ -3824,6 +3824,9 @@ ul.pager li {
 .btn-fab i.material-icons {
   font-size: 20px;
 }
+.btn-fab.btn-fab-mini i.material-icons {
+  font-size: 16px;
+}
 .form-item-search-api-views-fulltext input {
   color: #eceff1;
 }
@@ -3949,6 +3952,9 @@ details.more summary {
   background-color: #607d8b;
   display: inline-block;
   cursor: pointer;
+}
+.small .material-icons {
+  font-size: 16px;
 }
 /* ANIMATION */
 /* SHADOWS */
